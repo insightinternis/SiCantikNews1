@@ -114,13 +114,20 @@ nav a.on::after{content:"";position:absolute;left:25%;right:25%;top:0;height:3px
 @media(min-width:700px){.w{max-width:680px}.lg{max-width:460px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 <div id="app"></div>
 <script>
-const KEY="sicantik-v1";
-const TODAY=new Date();
-const DEF={
+<script>
+  // Inisialisasi Supabase untuk SiCantikNews1
+  const SUPABASE_URL = 'https://ykidtjbjdkilrpqunocd.supabase.co';
+  const SUPABASE_ANON_KEY = 'sb_publishable_SLVSWFlm7nc7_fQWexb2...'; // Masukkan key lengkap Anda
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  const KEY="sicantik-v1";
+  const TODAY=new Date();
+  const DEF={
  p:{nama:"Tn. Budi Santoso",usia:"58",jk:"Laki-laki",reg:"00-12-34-56",rm:"RM-884213",kamar:"Melati 302",kelas:"Kelas 2",bed:"Bed 2",tlp:"0812-3456-7890",pj:"Ibu Sari (istri)",tgl:"1968-05-14"},
  dpjp:"dr. Andini Pratama, Sp.PD",konsulan:"dr. Raka Wijaya, Sp.JP (Jantung)\ndr. Lina Hartono, Sp.GK (Gizi Klinik)",
  perawat:{pagi:"NS. Siti, S.Kep",sore:"NS. Dewi, S.Kep",malam:"NS. Agus, S.Kep"},
